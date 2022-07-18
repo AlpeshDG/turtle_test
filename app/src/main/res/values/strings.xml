@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Turtle Test</string>
+
+    <string name="issues">OkHttp Issues</string>
+    <string name="issue_info">Issue Info</string>
+    <string name="comments">Comments</string>
+</resources>

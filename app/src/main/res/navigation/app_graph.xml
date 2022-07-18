@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/fragment_issue_list">
+
+    <fragment
+        android:id="@+id/fragment_issue_list"
+        android:name="com.alpeshg.turtletest.ui.issue.IssuesFragment"
+        android:label="Issues">
+        <action
+            android:id="@+id/action_show_comments"
+            app:destination="@id/fragment_comment_list" />
+    </fragment>
+
+      <fragment
+        android:id="@+id/fragment_comment_list"
+        android:name="com.alpeshg.turtletest.ui.comment.CommentsFragment"
+        android:label="Comments">
+        <argument
+            android:name="issue"
+            app:argType="com.alpeshg.turtletest.data.model.Issue" />
+        <action
+            android:id="@+id/action_back_to_issue"
+            app:destination="@id/fragment_issue_list" />
+    </fragment>
+</navigation>
